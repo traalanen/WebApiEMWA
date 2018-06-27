@@ -1,0 +1,58 @@
+﻿.dropdown-toggle {
+   width: 100%;
+}
+
+.workout-plan {
+    padding-top: 8px;
+}
+
+.configuration-settings {
+    border: 1px solid #BABABA;
+    padding: 16px;
+}
+
+.align-text {
+    margin-top: 8px;
+}
+
+.workout-log-item {
+    border: 1px solid #BABABA;
+    border-radius: 4px;
+    padding: 4px;
+}
+
+.workout-detail-line {
+    max-width: 225px;
+}
+
+.workout-comment {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box; 
+}
+
+#workoutLogItems {
+    max-height: calc(100vh - 200px);
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+#slider1 .slider-selection,
+#slider2 .slider-selection {
+    background: #BABABA;
+}
+
+#slider1 .slider-handle,
+#slider2 .slider-handle {
+    background-image: linear-gradient(to bottom,#007bff 0,#007bff 100%);
+}
+
+.btn-min-size {
+    min-width: 80px;
+}
+
+#modalAbout {
+    min-width: 640px;
+}

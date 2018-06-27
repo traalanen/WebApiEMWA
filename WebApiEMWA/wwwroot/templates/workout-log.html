@@ -1,0 +1,43 @@
+﻿<div class="container workout-log-item mb-1">
+    <div class="row">
+        <div class="col-sm-8">
+            <div class="container text-sm-left">
+                <div class="row">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <span class="font-weight-bold workout-detail-line">{{:date}}</span>
+                        </div>
+                    </div>
+                    <div class="col-sm-12">
+                        <span class="workout-detail-line">{{:description}}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4 text-sm-right">
+            <div class="container text-sm-left">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <button type="button" class="btn-min-size btn-view btn btn-secondary float-right" data-dismiss="modal" data-toggle="modal" data-target="#modalLogView" data-backdrop="static" data-id="{{:id}}">
+                            View
+                        </button>
+                    </div>
+                </div>
+                <div class="row mt-1">
+                    <div class="col-sm-12">
+                        <button type="button" class="btn-min-size btn-delete-workout btn btn-danger float-right" data-dismiss="modal" data-id="{{:id}}">
+                            Delete
+                        </button>
+                    </div>
+                </div>
+                <div class="row mt-1">
+                    <div class="col-sm-12">
+                        <button type="button" class="btn-min-size btn-restart btn btn-success float-right" data-dismiss="modal" data-toggle="modal" data-target="#modalWorkout" data-backdrop="static" data-id="{{:id}}">
+                            Start
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

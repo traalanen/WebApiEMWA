@@ -1,0 +1,36 @@
+﻿<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <h4 class="text-center text-uppercase font-weight-bold">{{:equipmentUsed}}</h4>
+            <h4 class="text-center text-uppercase">Time Remaining</h4>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="alert alert-secondary" role="alert">
+                <h3 id="spanTimeRemaining" class="font-weight-bold text-center"></h3>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <h4 class="text-center text-uppercase">Next <span class="font-weight-bold">{{:repsPerMinute}}</span> {{:exercisePerformed}} in</h4>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <div id="alertTimeToNext" class="alert alert-success" role="alert">
+                <h3 id="spanTimeToNext" class="font-weight-bold text-center"></h3>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4">
+        </div>
+        <div class="col-sm-4">
+            <button type="button" id="btnStop" class="btn btn-danger btn-block" data-dismiss="modal" data-id="{{:id}}">Stop</button>
+        </div>
+        <div class="col-sm-4">
+        </div>
+    </div>
+</div>

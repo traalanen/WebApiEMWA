@@ -1,0 +1,11 @@
+{
+  "name": "ASP.NET",
+  "private": true,
+  "dependencies": {
+    "bootstrap": "v4.1.1",
+    "jQuery": "3.3.1",
+    "seiyria-bootstrap-slider": "v10.0.2",
+    "jquery.countdown": "2.2.0",
+    "moment": "2.22.2"
+  }
+}

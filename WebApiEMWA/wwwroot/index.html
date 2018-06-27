@@ -1,0 +1,209 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Every Minute Workout Assistant</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="row">
+                <div class="col-sm-12 page-header">
+                    <button id="btnAbout" type="button" class="btn btn-link p-0 pt-2" data-toggle="modal" data-target="#modalAbout" data-backdrop="static">
+                        <h4 class="font-weight-bold">Every Minute Workout Assistant</h4>
+                    </button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 page-header">
+                    <h5 class="font-weight-bold">A Simple Cardio + HIIT Timer and Workout Log</h5>
+                </div>
+            </div>
+        </header>
+        <div class="row">
+            <div class="col-sm-12">
+                <label class="flex-wrap">This application lets you perform a cardio workout with intervals of body weight exercises.</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <label class="flex-wrap">Build your <span class="font-weight-bold font-italic">Workout Plan</span> with the controls below.</label>
+            </div>
+        </div>
+    </div>
+    <div class="container configuration-settings">
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="dropdown">
+                    <button class="btn dropdown-toggle" type="button" id="btnActivity" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Cardio Equipment
+                    </button>
+                    <div class="dropdown-menu" id="menuActivityItems" aria-labelledby="btnActivity">
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <label class="align-text" for="workoutSlider">Total time</label>
+            </div>
+            <div class="col-sm-4">
+                <input id="workoutSlider" type="text" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="dropdown">
+                    <button class="btn dropdown-toggle" type="button" id="btnExercise" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Exercise
+                    </button>
+                    <div class="dropdown-menu" id="menuExerciseItems" aria-labelledby="btnExercise">
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <label for="repetitionsSlider">Total repetitions</label>
+            </div>
+            <div class="col-sm-4">
+                <input id="repetitionsSlider" type="text" />
+            </div>
+        </div>
+    </div>
+    <div class="container workout-plan mt-2">
+        <div class="row">
+            <div class="col-sm-12">
+                <label class="font-italic font-weight-bold">Workout Plan: </label>
+                <label>I want to <span id="spanActivity" class="font-weight-bold"></span></label> <label class="pull-left">for <span id="spanMinutes" class="font-weight-bold"></span> minutes</label>
+                <label>while doing <span id="spanRepetitions" class="font-weight-bold"></span> <span id="spanExercise" class="font-weight-bold"></span> every minute on the minute.</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                <button id="btnLog" type="button" class="btn btn-link float-left" data-toggle="modal" data-target="#modalLog" data-backdrop="static" disabled>
+                    Log
+                </button>
+            </div>
+            <div class="col-sm-8">
+                <button id="btnStart" type="button" class="btn btn-success float-right" data-toggle="modal" data-target="#modalWorkout" data-backdrop="static" disabled>
+                    Start
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade modal-workout" id="modalWorkout" tabindex="-1" role="dialog" aria-labelledby="modalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div id="workoutActive">
+                        <!--workout-active.html will be output here by jsrender-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal modal-log" id="modalLog" tabindex="-1" role="dialog" aria-labelledby="modalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <h4 class="text-center text-uppercase">Workout Log</h4>
+                            </div>
+                        </div>
+                        <div id="workoutLogItems">
+                            <!--workout-log.html will be output here by jsrender-->
+                        </div>
+                        <div class="row mt-5">
+                            <div class="col-sm-4">
+                            </div>
+                            <div class="col-sm-4">
+                                <button type="button" id="btnCloseLog" class="btn btn-primary btn-block" data-dismiss="modal">Close</button>
+                            </div>
+                            <div class="col-sm-4">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade modal-log" id="modalLogView" tabindex="-1" role="dialog" aria-labelledby="modalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <h4 class="text-center text-uppercase">Log Workout</h4>
+                            </div>
+                        </div>
+                        <div id="workoutLogItem">
+                            <!--workout-log-view.html will be output here by jsrender-->
+                        </div>
+                        <div class="row mt-3 mb-3">
+                            <div class="col-sm-4">
+                            </div>
+                            <div class="col-sm-4">
+                                <button type="button" id="btnCloseItem" class="btn btn-success btn-block" data-dismiss="modal">Save</button>
+                            </div>
+                            <div class="col-sm-4">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade modal-log" id="modalAbout" tabindex="-1" role="dialog" aria-labelledby="modalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div id="modalAboutDetail">
+                        <!--about.html will be output here by jsrender-->
+                    </div>
+                    <div class="row mt-3 mb-3">
+                        <div class="col-sm-4">
+                        </div>
+                        <div class="col-sm-4">
+                            <button type="button" id="btnCloseAbout" class="btn btn-success btn-block" data-dismiss="modal">Close</button>
+                        </div>
+                        <div class="col-sm-4">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Stylesheets-->
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="lib/seiyria-bootstrap-slider/dist/css/bootstrap-slider.min.css" />
+    <link rel="stylesheet" href="lib/seiyria-bootstrap-slider/dependencies/css/highlightjs-github-theme.css" />
+    <link rel="stylesheet" href="styles/default.css" />
+
+    <!--3rd party scripts-->
+    <script src="lib/jQuery/dist/jquery.min.js"></script>
+    <script src="lib/bootstrap/assets/js/vendor/popper.min.js"></script>
+    <script src="lib/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="lib/seiyria-bootstrap-slider/dist/bootstrap-slider.min.js"></script>
+    <script src="lib/seiyria-bootstrap-slider/dependencies/js/highlight.min.js"></script>
+    <script src="lib/seiyria-bootstrap-slider/dependencies/js/modernizr.js"></script>
+    <script src="lib/moment/min/moment.min.js"></script>
+    <script src="lib/jquery.countdown/dist/jquery.countdown.min.js"></script>
+    <script src="lib/jsrender-master/jsrender.min.js"></script>
+
+    <!--local scripts-->
+    <script src="scripts/page-elements.js"></script>
+    <script src="scripts/template-handler.js"></script>
+    <script src="scripts/workout-log.js"></script>
+    <script src="scripts/configuration.js"></script>
+    <script src="scripts/workout.js"></script>
+    <script src="scripts/index-page.js"></script>
+    <script src="scripts/start.js"></script>
+    <script src="scripts/about.js"></script>
+
+
+</body>
+</html>
